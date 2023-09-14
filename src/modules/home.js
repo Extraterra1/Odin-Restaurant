@@ -1,3 +1,5 @@
+import Img1 from "../img1.jpg";
+import Img2 from "../img2.jpg";
 export default function Home() {
   const contentContainer = document.querySelector(".content");
   contentContainer.children[0].remove();
@@ -34,6 +36,9 @@ export default function Home() {
                 libations that perfectly complement your meal. From classic cocktails to our signature creations, you're in for a treat.
               </p>
             </div>`;
+  wrapper.querySelector("img").src = Img1;
+  wrapper.querySelectorAll("img")[1].src = Img2;
+
   contentContainer.appendChild(wrapper);
   return { page: "home", element: wrapper };
 }

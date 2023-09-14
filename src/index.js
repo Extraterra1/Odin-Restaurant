@@ -2,6 +2,10 @@ import "./style.css";
 import Home from "./modules/home";
 import About from "./modules/about";
 import Contact from "./modules/contact";
+
+import Img1 from "./img1.jpg";
+import Img2 from "./img2.jpg";
+
 let curPage = "home";
 
 const changePage = function (e) {
@@ -11,3 +15,6 @@ const changePage = function (e) {
 };
 
 document.querySelectorAll(".header ul li").forEach((e) => e.addEventListener("click", changePage));
+
+document.querySelector("img").src = Img1;
+document.querySelectorAll("img")[1].src = Img2;
